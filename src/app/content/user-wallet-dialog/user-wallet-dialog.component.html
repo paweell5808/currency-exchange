@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Sell {{options.code}}</h2>
+<mat-dialog-content>
+  <h3>Buying rate at {{time | date:'shortTime'}} is: <span style="font-weight: bold;">{{options.purchasePrice | currency:'PLN':''}} PLN </span></h3>
+  <h3>Your available: <span style="font-weight: bold;">{{availablePln }} PLN</span></h3>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Selling {{options.code}}</mat-label>
+    <input type="number" matInput step="1" min="0" [max]="getMaxValueToBuy()" [(ngModel)]="value">
+  </mat-form-field>
+
+  <div>
+    <mat-checkbox class="example-margin" [(ngModel)]="confirmSell">
+      Do you confirm the purchase?
+    </mat-checkbox>
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [disabled]="confirmSell ? value < 1 || value > getMaxValueToBuy() : true" [mat-dialog-close]="true" (click)="buyCurrency()">Sell</button>
+</mat-dialog-actions>

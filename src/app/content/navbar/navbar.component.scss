@@ -1,0 +1,31 @@
+.tools-container {
+  flex: 1;
+}
+
+.logo-container {
+  height: 100%;
+  button {
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-size: 36px;
+    height: 100%;
+  }
+}
+
+mat-toolbar-row {
+  padding: 0rem 2rem;
+}
+
+.user-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .user-name {
+    padding: 0rem 1rem;
+    font-size: 16px;
+  }
+}

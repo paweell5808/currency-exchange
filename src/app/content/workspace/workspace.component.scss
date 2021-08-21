@@ -1,0 +1,25 @@
+.workspace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+app-currencies {
+  width: 50%;
+  height: 50%;
+  margin: 2rem 1rem 2rem 2rem;
+}
+
+app-user-wallet {
+  width: 50%;
+  height: 50%;
+  margin: 2rem 2rem 2rem 1rem;
+}

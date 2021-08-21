@@ -1,0 +1,20 @@
+table {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50px;
+}
+
+.center th, td {
+  text-align: center;
+}
+
+mat-card-subtitle {
+  padding-top: 2rem;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 18px;
+  span {
+    margin-left: 1rem;
+  }
+}

@@ -1,0 +1,7 @@
+<app-navbar [isLogged]="isLoggedIn" [userName]="userName" (loggedIn)="isLoggedIn = $event"></app-navbar>
+
+<router-outlet></router-outlet>
+
+<app-login *ngIf="!isLoggedIn" (loggedIn)="isLoggedIn = $event; userName = $event"></app-login>
+
+<app-workspace *ngIf="isLoggedIn"></app-workspace>

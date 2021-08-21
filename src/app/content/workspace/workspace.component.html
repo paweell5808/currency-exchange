@@ -1,0 +1,12 @@
+<div class="workspace">
+  <div class="loading" *ngIf="isLoading">
+    <mat-progress-spinner
+      color="primary"
+      mode="indeterminate">
+    </mat-progress-spinner>
+  </div>
+
+  <app-currencies [isLoading]="isLoading" [time]="time" [availablePln]="availablePln" [data]="dataSource.asObservable()"></app-currencies>
+  <app-user-wallet [isLoading]="isLoading" [time]="time" [availablePln]="availablePln" [data]="dataSource.asObservable()"></app-user-wallet>
+
+</div>
